@@ -171,10 +171,12 @@ public class Main {
         int twoSentryBack = thisYear - 200;
         int oneSentryForward = thisYear + 100;
         int cometYearRate = 79;
-        int starterYear = 0;
 
-
-
+        for (; twoSentryBack<=oneSentryForward; twoSentryBack++){
+            if (twoSentryBack % 79==0){
+            System.out.println(twoSentryBack);
+            }
+        }
     }
 }
 
