@@ -27,7 +27,6 @@ public class Main {
             System.out.println("Месяц " + month + " сумма накоплений равна " + money + " рублей");
             month= month+1;
         }
-        System.out.println("Месяц " + month + " нужен чтобы накопить " + sum + " рублей");
     }
 
     public static void task2() {
@@ -53,8 +52,23 @@ public class Main {
     }
 
     public static void task3() {
+        //В стране Y население равно 12 миллионов человек.
+        //
+        //Рождаемость составляет 17 человек на 1000, смертность — 8 человек.
+        // Рассчитайте, какая численность населения будет через 10 лет, если показатели рождаемости и смертности постоянны.
+        //
+        //В консоль выведите результат операции на каждый год в формате: «Год …, численность населения составляет …».
 
         System.out.println("\nЗадача_3");
+        int population = 12_000_000;
+        int count = 1000;
+        int productive = 17;
+        int death = -8;
+        int duration = 0;
+        for ( ;duration <=12; duration++) {
+            population = population + population / count * (productive+death);
+            System.out.println("Год " + duration + " численность населения составляет " + population);
+        }
     }
 
     public static void task4() {
