@@ -173,7 +173,7 @@ public class Main {
         int cometYearRate = 79;
 
         for (; twoSentryBack<=oneSentryForward; twoSentryBack++){
-            if (twoSentryBack % 79==0){
+            if (twoSentryBack % cometYearRate==0){
             System.out.println(twoSentryBack);
             }
         }
