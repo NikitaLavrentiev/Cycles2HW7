@@ -18,18 +18,38 @@ public class Main {
 
         System.out.println("\nЗадача_1");
         float money = 0f;
-
-        for (int month = 1; month <= 12; month++) {
-            money += 29000;
+        int month = 1;
+        int sum = 2459000;
+        while (money <= sum) {
+            money += 15000;
             float moneyFlow = money * 1.01f;
             money = moneyFlow;
             System.out.println("Месяц " + month + " сумма накоплений равна " + money + " рублей");
+            month= month+1;
         }
+        System.out.println("Месяц " + month + " нужен чтобы накопить " + sum + " рублей");
     }
 
     public static void task2() {
+        //Выведите в одну строку через пробел числа от 1 до 10 с помощью цикла while.
+        //На следующей строке выведите числа в обратном порядке от 10 до 1 с помощью цикла for.
+        //Для обоих циклов можно использовать как одну общую переменную, так и в каждом цикле свою.
+        //Не забудьте выполнить переход на новую строку между двумя циклами.
+        //В результате программы вывод должен получиться следующий:
+        //1 2 3 4 5 6 7 8 9 10
+        //10 9 8 7 6 5 4 3 2 1
 
         System.out.println("\nЗадача_2");
+        int i = 1;
+        while (i <= 10) {
+            i = i + 1;
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for (int b=10; b>=1; b--) {
+            System.out.print(b + " ");
+        }
+
     }
 
     public static void task3() {
