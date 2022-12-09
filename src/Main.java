@@ -64,7 +64,7 @@ public class Main {
         int count = 1000;
         int productive = 17;
         int death = -8;
-        int duration = 0;
+        int duration = 1;
         for ( ;duration <=12; duration++) {
             population = population + population / count * (productive+death);
             System.out.println("Год " + duration + " численность населения составляет " + population);
@@ -72,8 +72,23 @@ public class Main {
     }
 
     public static void task4() {
+        //Василий решил положить деньги на накопительный счет, где каждый месяц к сумме его вклада добавляется еще 7%.
+        // Первоначальная сумма вклада — 15 тысяч рублей.
+        //Вычислите и выведите в консоль, сколько месяцев Василию нужно будет копить, чтобы собрать сумму в 12 миллионов рублей при условии,
+        // что процент банка от накоплений не меняется, а всегда равен 7%.
+        //Выведите в консоль результат программы с указанием суммы накоплений по каждому месяцу.
 
-        System.out.println("\nЗадача_4");
+        System.out.println("\nЗадача_4");//после 102 месяца сумма на счёте превращается в E
+        float money = 10000f;
+        int month = 1;
+        int sum = 12000000;
+        float increaseRate = 1.07f;
+        while (money <= sum) {
+            float moneyFlow = money * increaseRate;
+            money = moneyFlow;
+            System.out.println("Месяц " + month + " сумма накоплений равна " + money + " рублей");
+            month= month+1;
+        }
     }
 
     public static void task5() {
